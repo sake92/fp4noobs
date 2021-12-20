@@ -1,8 +1,10 @@
-# fp4noobs
+# FP for beginners, in Scala 3
 
-FP for beginners
+Order of reading:  
+1. semigroup
+1. monoid
 
-
+---
 ## Nicer Syntax
 We usually want a nice "operator-ish" syntax like `1 + 3`.  
 Scala has "infix notation" for functions.  

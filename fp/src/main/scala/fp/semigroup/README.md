@@ -1,11 +1,11 @@
 
-# Semigroup - "Combineable"
+# Semigroup ~= "Combineable"
 
 It represents an *associative operation*:  
 `(a + b) + c ==  a + (b + c) == a + b + c`  
 
 That means that **ordering of operations does not matter**.  
-You can choose whichever order you prefer, you will always get correct result.  
+You can choose whichever order you prefer, you will always get *correct result*.  
 In simpler terms, we can *put parens wherever we like*.
 
 ---
@@ -15,4 +15,19 @@ a+b+c+d == (a+b)+(c+d)
 ```
 This means we can calculate `a+b` and `c+d` independently, in parallel.  
 That is only possible because the operation is **associative**.
+
+---
+
+Semigroup(and Monoid) is one of rare typeclasses that can have *multiple valid implementations* for some type.  
+For example, for `Int` type, both `+` and `*` are valid semigroups.  
+Also, for `Boolean` type, both `||` and `&&` are valid semigroups.  
+
+For that reason Haskell has `newtype`s (wrapper types) like `Sum` and `Product` for `Integer`s,  
+and `All` and `Any` for `Bool`s.
+
+Similar concept to `newtype` in Scala 3 is `opaque type`.  
+https://docs.scala-lang.org/scala3/book/types-opaque-types.html#opaque-types
+
+
+
 
