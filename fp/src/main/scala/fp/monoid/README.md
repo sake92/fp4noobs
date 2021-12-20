@@ -1,18 +1,20 @@
 
 # Monoid ~= "Combineable" + "Empty"
 
-It represents an *associative operation*:  
-`(a + b) + c ==  a + (b + c) == a + b + c`  
+Usual symbols and function names are: `empty`, `mempty`, `identity` etc.
 
-That means that **ordering of operations does not matter**.  
-You can choose whichever order you prefer, you will always get *correct result*.  
-In simpler terms, we can *put parens wherever we like*.
 
----
-For example, to get better performance you could parallelize some operations:
-```scala
-a+b+c+d == (a+b)+(c+d)
-```
-This means we can calculate `a+b` and `c+d` independently, in parallel.  
-That is only possible because the operation is **associative**.
+Monoid extends Semigroup.  
+It is also an *associative operation*, but it also has an **empty value**.
+
+For example, `empty`:
+- for `Int` (wrt sum) is `0`
+- for `String` is `""`
+- for `List[T]` is `List()`
+- for `Option[T]` is `None`
+
+
+--- 
+In older Haskell versions Monoid did not extend Semigroup.  
+It had `mappend` defined on itself.
 
