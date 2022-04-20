@@ -1,15 +1,15 @@
 package fp.functor
 
 trait Functor[F[_]] {
-  extension [A, B](x: F[A]) def map(f: A => B): F[B]
+  extension [A](fa: F[A]) def map[B](f: A => B): F[B]
 }
 
 object Functor {
   given Functor[List] with
-    extension [A, B](x: List[A]) def map(f: A => B): List[B] = x.map(f)
-  
+    extension [A](fa: List[A]) def map[B](f: A => B): List[B] = fa.map(f)
+
   given Functor[Option] with
-    extension [A, B](x: Option[A]) def map(f: A => B): Option[B] = x.map(f)
+    extension [A](fa: Option[A]) def map[B](f: A => B): Option[B] = fa.map(f)
 
 }
 
@@ -25,6 +25,5 @@ object Functor {
   println(genericPlus1(Option.empty))
 
 // independent of which Functor is used
-def genericPlus1[F[_] : Functor](functor: F[Int]): F[Int] =
+def genericPlus1[F[_]: Functor](functor: F[Int]): F[Int] =
   functor.map(_ + 1)
-
