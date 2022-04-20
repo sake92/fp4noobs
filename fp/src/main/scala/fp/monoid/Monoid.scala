@@ -37,12 +37,9 @@ object Monoid {
 }
 
 /* usage */
-def combineAll[T: Monoid](xs: List[T]): T =
-  xs.foldLeft(Monoid[T].empty)(_ <> _)
-
 @main def monoidMain: Unit =
   import Monoid.given
-  
+
   println(Monoid[Int].empty)
   println(Monoid[List[String]].empty)
 
@@ -50,3 +47,6 @@ def combineAll[T: Monoid](xs: List[T]): T =
 
   println(combineAll(List(1, 2, 3)))
   println(combineAll(List("abc", "def")))
+
+def combineAll[T: Monoid](xs: List[T]): T =
+  xs.foldLeft(Monoid[T].empty)(_ <> _)

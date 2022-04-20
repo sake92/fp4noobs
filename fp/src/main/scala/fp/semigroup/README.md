@@ -15,12 +15,12 @@ For example, to get better performance you could parallelize some operations:
 ```scala
 a+b+c+d == (a+b)+(c+d)
 ```
-This means we can calculate `a+b` and `c+d` independently, in parallel.  
-That is only possible because the operation is **associative**.
+This means we can calculate `a+b` and `c+d` in parallel.  
+That is possible only because the operation is **associative**.
 
 ---
 
-Semigroup(and Monoid) is one of rare typeclasses that can have *multiple valid implementations* for some type.  
+Semigroup(and Monoid) is one of rare typeclasses that can have *many valid implementations* for some type.  
 For example, for `Int` type, both `+` and `*` are valid semigroups.  
 Also, for `Boolean` type, both `||` and `&&` are valid semigroups.  
 

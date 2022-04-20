@@ -4,6 +4,7 @@ Order of reading:
 1. semigroup
 1. monoid
 1. functor
+1. applicative
 
 ## Running
 
@@ -14,8 +15,8 @@ Order of reading:
 ---
 ## Nicer Syntax
 We usually want a nice "operator-ish" syntax like `1 + 3`.  
-Scala has "infix notation" for functions.  
-But those have to be defined on an object. 
+Scala has *infix notation* for functions.  
+But those have to be called on an object. 
 
 If we have:
 ```scala
@@ -38,19 +39,21 @@ So we "fix" the first example by extending the type using "extension functions":
 ```scala
 extension (x: Int)
   def f(y: Int): Int = x + y
+
+1 f 2   // works, yay!
 ```
 
 
 
 ---
 
-## Types
+## Advanced types
 This is mostly a rewording of Adriaan's answer from SO: https://stackoverflow.com/a/6427289/4496364  
 He uses an analogy with values:
 - a **proper value** is "immediately usable" and "concrete", like `1`, `true`, an object etc. 
-- **value constructor**(function) is NOT "immediatelly usable", you need to give it a value first
+- **value constructor**(function) is NOT "immediately usable", you need to give it a value first
 This is "first order" value constructor, one level deep.
-- **value constructor constructor** is NOT "immediatelly usable". If you give it a value, it will return another value constructor. This is called a **higher order** abstraction.   
+- **value constructor constructor** is NOT "immediately usable". If you give it a value, it will return another value constructor. This is called a **higher order** abstraction.   
 "higher-order abstraction abstracts over something that abstracts over something" - Adriaan   
 This reminds me of OOP abstract factory design pattern (factory of factories). :)
 
