@@ -18,11 +18,11 @@ This repo tries to simplify that learning path.
 It tries to introduce minimal syntax and some examples of usage for each concept.
 
 Order of reading:  
-1. semigroup
-1. monoid
-1. functor
-1. applicative
-1. monad
+1. [semigroup](https://github.com/sake92/fp4noobs/tree/main/fp/src/main/scala/fp/semigroup)
+1. [monoid](https://github.com/sake92/fp4noobs/tree/main/fp/src/main/scala/fp/monoid)
+1. [functor](https://github.com/sake92/fp4noobs/tree/main/fp/src/main/scala/fp/functor)
+1. [applicative](https://github.com/sake92/fp4noobs/tree/main/fp/src/main/scala/fp/applicative)
+1. [monad](https://github.com/sake92/fp4noobs/tree/main/fp/src/main/scala/fp/monad)
 
 ## Running
 
