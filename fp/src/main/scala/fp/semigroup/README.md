@@ -1,6 +1,9 @@
 
 # Semigroup ~= "Combineable"
 
+Functions:
+- append
+
 Usual symbols and function names are: `<>`, `|+|`, `sappend` etc.
 
 It represents an *associative operation*:  

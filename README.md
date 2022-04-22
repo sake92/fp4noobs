@@ -1,5 +1,10 @@
 # FP for beginners, in Scala 3
 
+Disclaimer:  
+This is by no means a thorough introduction to FP concepts.  
+It contains lots of my *personal* opinions/views.  
+But it could help beginners to understand faster some of this mathy stuff.
+
 The basics of FP are usually simple to understand:
 - immutability
 - tuples
@@ -17,6 +22,7 @@ Order of reading:
 1. monoid
 1. functor
 1. applicative
+1. monad
 
 ## Running
 
@@ -83,7 +89,6 @@ you can refer to this table:
 | values          | 10      | (x: Int) => x       |(f: (Int => Int)) => f(10)     |
 | types (classes) | String  | List                |Functor                        |
 | types           | String  | ({type λ[x] = x})#λ |({type λ[F[x]] = F[String]})#λ |
-
 
 
 ![](https://i.stack.imgur.com/K0dwL.jpg)

@@ -1,6 +1,9 @@
 
 # Functor ~= "Mappable"
 
+Functions:
+- map
+
 Usual symbols and function names are: `map`, `fmap`, `<$>` etc.  
 Notice that  `<$>` looks like `$` (function application),  
 because func-tor *is function application* but within a container/context.

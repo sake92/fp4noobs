@@ -1,6 +1,10 @@
 
 # Monoid ~= "Combineable" + "Empty"
 
+Functions:
+- empty/pure
+- append
+
 Usual symbols and function names for append are: `<>`, `|+|`, `append` etc.
 
 Usual symbols and function names for empty are: `empty`, `mempty`, `identity` etc.
