@@ -1,5 +1,17 @@
 # FP for beginners, in Scala 3
 
+The basics of FP are usually simple to understand:
+- immutability
+- tuples
+- ADTs: `case class`es and `enum`s
+- recursion
+- collections functions like `map`, `fold` etc
+
+
+Where it gets challenging is the maths(category theory) terminology and advanced types (higher kinded types).  
+This repo tries to simplify that learning path.  
+It tries to introduce minimal syntax and some examples of usage for each concept.
+
 Order of reading:  
 1. semigroup
 1. monoid

@@ -1,7 +1,9 @@
 
 # Monoid ~= "Combineable" + "Empty"
 
-Usual symbols and function names are: `empty`, `mempty`, `identity` etc.
+Usual symbols and function names for append are: `<>`, `|+|`, `append` etc.
+
+Usual symbols and function names for empty are: `empty`, `mempty`, `identity` etc.
 
 
 Monoid extends Semigroup.  
