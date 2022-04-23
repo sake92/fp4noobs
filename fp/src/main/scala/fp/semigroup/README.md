@@ -28,8 +28,7 @@ For example, for `Int` type, both `+` and `*` are valid semigroups.
 Also, for `Boolean` type, both `||` and `&&` are valid semigroups.  
 
 For that reason Haskell has `newtype`s (wrapper types) like `Sum` and `Product` for `Integer`s,  
-and `All` and `Any` for `Bool`s.
-
+and `All` and `Any` for `Bool`s.  
 Similar concept to `newtype` in Scala 3 is `opaque type`.  
 https://docs.scala-lang.org/scala3/book/types-opaque-types.html#opaque-types
 

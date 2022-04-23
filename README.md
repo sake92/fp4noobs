@@ -72,7 +72,7 @@ He uses an analogy with values:
 - a **proper value** is "immediately usable" and "concrete", like `1`, `true`, an object etc. 
 - **value constructor**(function) is NOT "immediately usable", you need to give it a value first
 This is "first order" value constructor, one level deep.
-- **value constructor constructor** is NOT "immediately usable". If you give it a value, it will return another value constructor. This is called a **higher order** abstraction.   
+- **value constructor constructor** is NOT "immediately usable". If you give it a value, it will return another value constructor. This is a **higher order** abstraction.   
 "higher-order abstraction abstracts over something that abstracts over something" - Adriaan   
 This reminds me of OOP abstract factory design pattern (factory of factories). :)
 
@@ -89,7 +89,7 @@ you can refer to this table:
 | --------------- | ------- | ------------------- |----------------------------   |
 | values          | 10      | (x: Int) => x       |(f: (Int => Int)) => f(10)     |
 | types (classes) | String  | List                |Functor                        |
-| types           | String  | ({type λ[x] = x})#λ |({type λ[F[x]] = F[String]})#λ |
+| types           | String  | type F = [X] =>> R  |type FF = [X] =>> [Y] =>> R    |
 
 
 ![](https://i.stack.imgur.com/K0dwL.jpg)
