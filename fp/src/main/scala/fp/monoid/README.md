@@ -19,6 +19,7 @@ For example, `empty`:
 - for `List[T]` is `List()`
 - for `Option[T]` is `None`
 
+---
 Another typeclass which builds upon Monoid's power is Foldable.  
 It provides handy utilities like `foldMap` (map+fold in one go) and many others.  
 See https://typelevel.org/cats/typeclasses/foldable.html

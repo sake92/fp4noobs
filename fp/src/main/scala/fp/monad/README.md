@@ -55,13 +55,20 @@ Compiler converts the `for` comprehension into a series of `flatMap`-s.
 You can try it in [Ammonite REPL](https://ammonite.io/#desugar) with `desugar` and see for yourself.  
 We say that `aNum` is "pulled" from `Option[T]`.  
 
-> In Haskell there is `do` notation which is basically the same thing
-
 If we had `Future[T]`-s instead, the code looks like sequential code!  
 We can read it from top to bottom, without having to chase callbacks.  
 
-There is a similar concept in C#, JavaScript, Kotlin etc, called `async`-`await`.  
+> In Haskell there is `do` notation which is basically the same thing
+
+
+
+## Async/await
+There is a similar concept to for-comprehensions in C#, JavaScript, Kotlin etc, called `async`-`await`.  
 It is specialized to make async code *look like it is sequential*.  
+
+The `async function..` corresponds to `Monad[T]`.  
+Doing `const res = await myFun()` corresponds to `for { res <- myMonadicValue }`.
+
 One thing that is missing in JS though is the static type checking, 
 so we can easily forget one `await` and suddenly our code does not behave like it should.. In scala we would get a compile error, so we are safe! :)
 
