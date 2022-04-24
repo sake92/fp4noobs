@@ -15,8 +15,10 @@ The basics of FP are usually simple to understand:
 
 Where it gets challenging is the maths(category theory) terminology and advanced types (higher kinded types).  
 This repo tries to simplify that learning path.  
-It tries to introduce minimal syntax and some examples of usage for each concept.  
-Each of these is using [typeclass pattern](https://docs.scala-lang.org/scala3/book/ca-type-classes.html) which you need to know already.
+It introduces minimal syntax and some examples of usage for each concept.  
+We don't bother with *laws* here, we just consider the intuition and usage.  
+
+Each of these concepts is using the [typeclass pattern](https://docs.scala-lang.org/scala3/book/ca-type-classes.html) which you need to know already.
 
 Order of reading:  
 1. [semigroup](https://github.com/sake92/fp4noobs/tree/main/fp/src/main/scala/fp/semigroup)
@@ -24,6 +26,11 @@ Order of reading:
 1. [functor](https://github.com/sake92/fp4noobs/tree/main/fp/src/main/scala/fp/functor)
 1. [applicative](https://github.com/sake92/fp4noobs/tree/main/fp/src/main/scala/fp/applicative)
 1. [monad](https://github.com/sake92/fp4noobs/tree/main/fp/src/main/scala/fp/monad)
+
+
+Highly recommended exercises:
+- https://www.scala-exercises.org/fp_in_scala
+- https://www.scala-exercises.org/cats
 
 ## Running examples
 

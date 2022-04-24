@@ -53,7 +53,7 @@ parseInt("10").flatMap { aNum =>
 ```
 Compiler converts the `for` comprehension into a series of `flatMap`-s.  
 You can try it in [Ammonite REPL](https://ammonite.io/#desugar) with `desugar` and see for yourself.  
-We can say that `aNum` is "pulled" from `Option[T]`.  
+We say that `aNum` is "pulled" from `Option[T]`.  
 
 > In Haskell there is `do` notation which is basically the same thing
 

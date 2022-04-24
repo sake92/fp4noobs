@@ -33,13 +33,25 @@ enum Opt[+T]:
 
   println(
     Filled(5).flatMap { v1 => 
-      Filled(v1 * 2)
+      Filled(2).map { v2 =>
+        v1 * v2
+      }
     }
   )
 
   println(
     for
       v1 <- Filled(5)
-      v2 <- Filled(v1 * 2)
-    yield v2
+      v2 <- Filled(2)
+    yield v1 * v2
   )
+
+  println(
+    multiplyMonads(Filled(5), Filled(2))
+  )
+
+def multiplyMonads[M[_]](m1: M[Int], m2: M[Int])(using m: Monad[M]): M[Int] =
+  for
+    v1 <- m1
+    v2 <- m2
+  yield v1 * v2
