@@ -1,5 +1,8 @@
 # FP for beginners, in Scala 3
 
+> A change in perspective is worth 80 IQ points ~ Alan Kay
+
+
 Disclaimer:  
 This is by no means a thorough introduction to FP concepts.  
 It contains lots of my *personal* opinions/views.  
