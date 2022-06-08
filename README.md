@@ -29,6 +29,9 @@ Order of reading:
 1. [functor](https://github.com/sake92/fp4noobs/tree/main/fp/src/main/scala/fp/functor)
 1. [applicative](https://github.com/sake92/fp4noobs/tree/main/fp/src/main/scala/fp/applicative)
 1. [monad](https://github.com/sake92/fp4noobs/tree/main/fp/src/main/scala/fp/monad)
+1. [writer](https://github.com/sake92/fp4noobs/tree/main/fp/src/main/scala/fp/writer)
+1. [reader](https://github.com/sake92/fp4noobs/tree/main/fp/src/main/scala/fp/reader)
+1. [state](https://github.com/sake92/fp4noobs/tree/main/fp/src/main/scala/fp/state)
 
 
 Highly recommended exercises:

@@ -4,6 +4,7 @@
 Functions:
 - tell
 
+http://functionaltalks.org/2013/06/27/ben-kolera-isolating-side-effects-with-monads/
 
 
 Since in FP we don't have global state, or any kind of class field/property,  
