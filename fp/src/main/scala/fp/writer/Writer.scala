@@ -8,7 +8,11 @@ case class Writer[L: Monoid, T](log: L, value: T) {
     Writer(log <> logValue, value)
 }
 
-// just for readability
+// - just for readability
+// - Monad expects a F[_] but we have a F[_, _]
+// so we hack around it with a type lambda
+// in haskell you could use partial type application
+
 type Wr[L] = [T] =>> Writer[L, T]
 
 given [L: Monoid]: Monad[Wr[L]] with {
