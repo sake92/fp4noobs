@@ -3,19 +3,23 @@ package fp.writer
 import fp.monad.Monad
 import fp.monoid.Monoid
 
-case class Writer[W: Monoid, T](value: T, log: W)
+case class Writer[L: Monoid, T](log: L, value: T) {
+  def tell(logValue: L): Writer[L, T] =
+    Writer(log <> logValue, value)
+}
 
 // just for readability
-type Wr[W] = [T] =>> Writer[W, T]
+type Wr[L] = [T] =>> Writer[L, T]
 
-given [W: Monoid]: Monad[Wr[W]] with {
+given [L: Monoid]: Monad[Wr[L]] with {
 
-  def pure[A](a: A): Writer[W, A] = Writer(a, Monoid[W].empty)
+  def pure[A](a: A): Writer[L, A] =
+    Writer(Monoid[L].empty, a)
 
-  extension [A](wa: Writer[W, A])
-    def flatMap[B](f: A => Writer[W, B]): Writer[W, B] = {
+  extension [A](wa: Writer[L, A])
+    def flatMap[B](f: A => Writer[L, B]): Writer[L, B] = {
       val wb = f(wa.value)
-      Writer(wb.value, wa.log <> wb.log)
+      Writer(wa.log <> wb.log, wb.value)
     }
 }
 
@@ -24,8 +28,8 @@ given [W: Monoid]: Monad[Wr[W]] with {
 @main def writerMain: Unit = {
 
   val res = for {
-    v1 <- Writer(5, "Initialized. ")
-    v2 <- Writer(v1 * 2, "Multipied by 2.")
+    v1 <- Writer("Initialized. ", 5).tell("Loggggg... ")
+    v2 <- Writer("Multipied by 2.", v1 * 2)
   } yield v2
 
   println(res.value)
