@@ -5,6 +5,9 @@ trait Functor[F[_]] {
 }
 
 object Functor {
+
+  def apply[F[_]](using F: Functor[F]) = F
+
   given Functor[List] with
     extension [A](fa: List[A]) def fmap[B](f: A => B): List[B] = fa.map(f)
 

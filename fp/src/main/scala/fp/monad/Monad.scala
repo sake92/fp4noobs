@@ -1,4 +1,5 @@
-package fp.monad
+package fp
+package monad
 
 trait Monad[F[_]] {
 
@@ -14,6 +15,14 @@ trait Monad[F[_]] {
 }
 
 object Monad {
+
+  def apply[F[_]](using F: Monad[F]) = F
+
+  given Monad[List] with
+    def pure[A](a: A): List[A] = List(a)
+    extension [A](fa: List[A])
+      def flatMap[B](f: A => List[B]): List[B] = fa.flatMap(f)
+
   given Monad[Opt] with
     import Opt.*
     def pure[A](a: A): Opt[A] = Filled(a)
@@ -25,11 +34,6 @@ object Monad {
             case Empty          => Empty
             case Filled(value2) => Filled(value2)
 }
-
-// reinvent Option because it already has map/flatMap
-enum Opt[+T]:
-  case Empty extends Opt
-  case Filled(value: T) extends Opt[T]
 
 /* usage */
 
