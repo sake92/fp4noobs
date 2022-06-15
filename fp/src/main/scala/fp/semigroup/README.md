@@ -6,12 +6,17 @@ Functions:
 
 Usual symbols and function names are: `<>`, `|+|`, `sappend` etc.
 
-It represents an *associative operation*:  
+It represents an *associative binary operation*:  
 `(a + b) + c ==  a + (b + c) == a + b + c`  
 
 That means that **ordering of operations does not matter**.  
 You can choose whichever order you prefer, you will always get *correct result*.  
 In simpler terms, we can *put parens wherever we like*.
+
+For example, when doing `+` and `*` the order does not matter.  
+But for `-` and `/`, it does!  
+`5-2-3` == `(5-2)-3` != `5-(2-3)`  
+`6/2/3` == `(6/2)/3` != `6/(2/3)`  
 
 ---
 For example, to get better performance you could parallelize some operations:

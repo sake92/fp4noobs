@@ -33,6 +33,9 @@ Order of reading:
 1. [reader](https://github.com/sake92/fp4noobs/tree/main/fp/src/main/scala/fp/reader)
 1. [state](https://github.com/sake92/fp4noobs/tree/main/fp/src/main/scala/fp/state)
 
+Resources:
+- https://www.youtube.com/playlist?list=PLFrwDVdSrYE6dy14XCmUtRAJuhCxuzJp0
+- https://www.scalawithcats.com/dist/scala-with-cats.html
 
 Highly recommended exercises:
 - https://www.scala-exercises.org/fp_in_scala
